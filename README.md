@@ -140,7 +140,8 @@ WITH filtered AS (
             FROM website_pageviews
             WHERE pageview_url = '/lander-1'
         )
-)```
+)
+```
 
 ---
 
@@ -216,7 +217,8 @@ bounce_rate_calculation AS (
         SUM(bounced) / COUNT(website_session_id) AS bounce_rate
     FROM bounce_flag 
     GROUP BY landing_page
-)```
+)
+```
 
 **Results:**
 
@@ -329,7 +331,8 @@ SELECT CASE
         THEN 'We can be 95% confident that the new page has a higher bounce rate than the original.'
     ELSE 'We cannot be 95% confident that there is a real difference between the two pages. The confidence interval contains 0.' 
 END AS conclusion
-FROM interval_output;```
+FROM interval_output;
+```
 
 ### Results
 
